@@ -2,12 +2,59 @@ body{
 	background-color: #f2dab1;
 }
 
+#sideBar{
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: 100px;
+	width: 200px;
+	height: 100%;
+	background-color: black;
+}
+
+h1{
+	color: yellow;
+	font-family: "Bauhaus 93";
+	font-weight: bold;
+	font-size: 56px;
+	text-align: center;
+}
+
+h2{
+	margin-top: 24px;
+	color: gray;
+	font-family: "Agency FB";
+	font-weight: bold;
+	font-size: 48px;
+	text-align: center;
+}
+
+h3{
+	color: gray;
+	font-family: "Arial";
+	font-size: 36px;
+}
+
 #pField{
 	display: block;
 	width: 900px;
-	height: 500px;
-	margin: 100px auto;
+	height: 600px;
+	margin: 50px auto;
 	padding: 0;
 	outline: white 10px solid;
 	background-color: green;
+}
+
+#stopGameBtn{
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 50px;
+	background-color: red;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
 }
