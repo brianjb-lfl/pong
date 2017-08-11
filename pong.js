@@ -22,7 +22,7 @@ function pong(){
 	let dot = {x: 25, y: startY, radius: 5};
 
 	// start paddles
-	let pdlPosn = {x1: 15, x2: 870, y: mouseY, w: 15, h: 70}
+	let pdlPosn = {x1: 10, x2: 878, y: mouseY, w: 12, h: 70}
 
 	reDraw();
 
