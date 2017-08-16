@@ -59,7 +59,7 @@ function startGame(){
     // start ball motion
 	setTimeout(function(){
 		window.requestAnimationFrame(moveDot);
-	}, 1500);
+	}, 2000);
 }
 
 function moveDot(){
@@ -168,7 +168,7 @@ function reDraw(){
     // draw paddle
     ctx.beginPath();
     ctx.rect(pdlPosn.x, pdlPosn.y, pdlPosn.w, pdlPosn.h);
-    ctx.fillStyle = '#0f1984';
+    ctx.fillStyle = '#001780';
     ctx.fill();
 }
 
