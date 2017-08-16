@@ -5,13 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="./pong.css">
 	<script type="application/javascript" src="./pong.js"></script>
 </head>
-<body onload="pong();">
+<body onload="initPong();">
 	<div id="sideBar">
-		<h1>PONG</h1>
+		<h1>SOLO<br>PONG</h1>
 		<h2 id="scoreTxt"></h2>
 	</div>
 	<audio id="edgeTone" src="500.wav"></audio>	
 	<canvas id="pField" width="900" height="600"></canvas>
-	<button id="stopGameBtn" onclick="gameEnd();">Stop Game</button>
+	<button id="playBtn" onclick="startGame();">Play Again</button>
 </body>
 </html>
