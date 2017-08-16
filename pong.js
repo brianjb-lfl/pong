@@ -15,7 +15,8 @@ let incrX;          // current ball delta-x for each iteration
 let incrY;          // current ball delta-y for each iteration
 let dot;            // object holding draw info for ball
 let pdlPosn;        // object holding draw info for paddle
-
+let tones = [];        // array holding tone IDs
+let activeTone;     // array pointer to current strike tone
 
 function initPong(){
 	canv = document.getElementById("pField");
@@ -24,10 +25,12 @@ function initPong(){
 	canvH = 600;
 	canvW = 900;
     canvMargT = canv.getBoundingClientRect().top;
+    tones = ['tone07', 'tone08', 'tone09', 'tone10', 'tone11'];
     startGame();
 }
 
 function startGame(){
+    activeTone = 0;
 	currSc = 0;
 	document.getElementById("scoreTxt").innerHTML = currSc;
 	spdIncr = 3;
@@ -69,13 +72,13 @@ function moveDot(){
     else if((dot.x + incrX) < 0){
         // hit left wall
         incrX = -incrX;
-        document.getElementById('edgeTone').play()
+        document.getElementById(tones[activeTone]).play()
     }
 
 	if((dot.y + incrY > canvH) || (dot.y + incrY < 0)){
         // hit horizontal wall
 		incrY = -incrY;
-		document.getElementById('edgeTone').play()
+		document.getElementById(tones[activeTone]).play()
 	}
 
 	dot.x += incrX;
@@ -109,6 +112,7 @@ function chkBallStrike(){
         if (currV > spdIncr){
             incrX = incrX + 1;
             currV = 1;
+            activeTone = Math.min((activeTone + 1), 4);
         }        
 
         if(dot.y >= pdlPosn.y && dot.y <= (pdlPosn.y + 15)){
@@ -126,7 +130,7 @@ function chkBallStrike(){
         document.getElementById("scoreTxt").innerHTML = currSc;
         incrX = -incrX;
         dot.x = pdlPosn.x - 1;
-        document.getElementById('edgeTone').play()
+        document.getElementById(tones[activeTone]).play()
     }
 }
 
