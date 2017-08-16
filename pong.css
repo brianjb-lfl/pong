@@ -1,5 +1,5 @@
 body{
-	background-color: #cca25b;
+	background-color: #b19668;
 }
 
 #sideBar{
@@ -43,7 +43,10 @@ h3{
 	height: 600px;
 	margin: 50px auto;
 	padding: 0;
-	outline: white 10px solid;
+	border-right: white 10px solid;
+	border-top: #7d887d 12px ridge;
+	border-left: #7d887d 12px ridge;
+	border-bottom: #7d887d 12px ridge;
 	background-color: green;
 }
 

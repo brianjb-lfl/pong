@@ -25,7 +25,8 @@ function initPong(){
 	canvH = 600;
 	canvW = 900;
     canvMargT = canv.getBoundingClientRect().top;
-    tones = ['tone07', 'tone08', 'tone09', 'tone10', 'tone11'];
+    tones = ['tone265', 'tone265', 'tone329', 'tone329', 'tone395', 'tone395', 
+        'tone524', 'tone524'];
     startGame();
 }
 
@@ -112,7 +113,7 @@ function chkBallStrike(){
         if (currV > spdIncr){
             incrX = incrX + 1;
             currV = 1;
-            activeTone = Math.min((activeTone + 1), 4);
+            activeTone = Math.min((activeTone + 1), 7);
         }        
 
         if(dot.y >= pdlPosn.y && dot.y <= (pdlPosn.y + 15)){
@@ -156,7 +157,7 @@ function reDraw(){
     ctx.moveTo(450, 0);
     ctx.lineTo(450, 600);
     ctx.closePath();
-    ctx.stroke();	
+    ctx.stroke();
 
     // draw ball
     ctx.beginPath();
