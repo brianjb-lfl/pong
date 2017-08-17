@@ -46,7 +46,7 @@ p{
 	display: block;
 	width: 900px;
 	height: 600px;
-	margin: 50px auto;
+	margin: 20px auto;
 	padding: 0;
 	border-right: white 10px solid;
 	border-top: #7d887d 12px ridge;
@@ -57,7 +57,7 @@ p{
 
 #playBtn{
 	display: block;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 200px;
